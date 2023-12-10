@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш сайт</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        body {
+			background-image: url("backg.jpg");
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+			background-color: #B0E0E6;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #555;
+        }
+
+        .panel {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            background-color: #E0FFFF;
+			text-align: center;
+        }
+		.slick-prev,
+		.slick-next
+		{
+			font-size: 0;
+			line-height: 0;
+
+			position: absolute;
+			top: 50%;
+
+			display: block;
+
+			width: 60px;
+			height: 20px;
+			padding: 0;
+			-webkit-transform: translate(0, -50%);
+			-ms-transform: translate(0, -50%);
+			transform: translate(0, -50%);
+
+			cursor: pointer;
+
+			color: transparent;
+			border: none;
+			outline: none;
+			background: transparent;
+		}
+    </style>
+	
+</head>
+<body>
+    <header>
+        <h1>Сайт-топ</h1>
+    </header>
+
+    <nav>
+        <!-- Панель навигации -->
+        <ul>
+            <li><a href="#panel1">Панель с видео</a></li>
+            <li><a href="#panel2">Панель с текстом 1</a></li>
+            <li><a href="#panel3">Панель с текстом 2</a></li>
+            <li><a href="#panel4">Панель с тестом</a></li> <!-- Добавлена ссылка на новую панель -->
+        </ul>
+    </nav>
+
+    <section id="panel1" class="panel">
+    <!-- Панель с видео и слайдером -->
+    <h2>Панель с видео</h2>
+    
+    <div class="slider">
+        <div><iframe width="560" height="315" src="videos/00014.mp4" frameborder="0" allowfullscreen></iframe></div>
+        <div><iframe width="560" height="315" src="videos/00018.mp4" frameborder="0" allowfullscreen></iframe></div>
+		<div><iframe width="560" height="315" src="videos/00019.mp4" frameborder="0" allowfullscreen></iframe></div>
+		<div><iframe width="560" height="315" src="videos/00020.mp4" frameborder="0" allowfullscreen></iframe></div>
+		<div><iframe width="560" height="315" src="videos/00021.mp4" frameborder="0" allowfullscreen></iframe></div>
+        <!-- Добавьте другие видео по аналогии -->
+    </div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('.slider').slick({
+				dots: true,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				adaptiveHeight: true
+			});
+		});
+	</script>
+
+    <section id="panel2" class="panel">
+        <!-- Панель с текстом 1 -->
+        <h2>Панель с текстом 1</h2>
+        <p>Ваш текст здесь...</p>
+    </section>
+
+    <section id="panel3" class="panel">
+        <!-- Панель с текстом 2 -->
+        <h2>Панель с текстом 2</h2>
+        <p>Ваш текст здесь...</p>
+    </section>
+
+    <section id="panel4" class="panel">
+        <!-- Панель с тестом -->
+		<a href="https://quizizz.com/embed/quiz/65756168243bad44cda7f2a9">Тест</a>
+    </section>
+</body>
+</html>
