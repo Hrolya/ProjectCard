@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ваш сайт</title>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <style>
         body {
 			background-image: url("backg.jpg");
@@ -81,6 +79,21 @@
 			outline: none;
 			background: transparent;
 		}
+    .photo-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .photo-gallery div {
+        width: 30%;
+        margin: 10px;
+    }
+
+    .photo-gallery img {
+        width: 100%;
+        height: auto;
+    }
     </style>
 	
 </head>
@@ -109,31 +122,15 @@
         <!-- Добавьте другие видео по аналогии -->
     </div>
 	</section>
-
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-	<script>
-		$(document).ready(function(){
-			$('.slider').slick({
-				dots: true,
-				infinite: true,
-				speed: 300,
-				slidesToShow: 1,
-				adaptiveHeight: true
-			});
-		});
-	</script>
 <section id="panel6" class="panel">
-    <h2>Слайдер фотографий</h2>
-    <div class="photo-slider">
+    <h2>Галерея фотографий</h2>
+    <div class="photo-gallery">
         <div><img src="one.jpg" alt="Фотография 1"></div>
         <div><img src="two.jpg" alt="Фотография 2"></div>
-	    <div><img src="three.jpg" alt="Фотография 2"></div>
-	    <div><img src="four.jpg" alt="Фотография 2"></div>
-	    <div><img src="five.jpg" alt="Фотография 2"></div>
-	    <div><img src="six.jpg" alt="Фотография 2"></div>
-        <!-- Добавьте другие фотографии по аналогии -->
+        <div><img src="three.jpg" alt="Фотография 3"></div>
+        <div><img src="four.jpg" alt="Фотография 4"></div>
+        <div><img src="five.jpg" alt="Фотография 5"></div>
+        <div><img src="six.jpg" alt="Фотография 6"></div>
     </div>
 </section>
 
