@@ -93,6 +93,7 @@
         <!-- Панель навигации -->
         <ul>
             <li><a href="#panel1">Видео-плеер</a></li>
+	    <li><a href="#panel6">Фотографии</a></li>
             <li><a href="#panel2">QR-код</a></li>
             <li><a href="#panel3">Обратная связь</a></li>
             <!-- <li><a href="#panel4">Панель с тестом</a></li>  Добавлена ссылка на новую панель -->
@@ -123,7 +124,32 @@
 			});
 		});
 	</script>
+<section id="panel6" class="panel">
+    <h2>Слайдер фотографий</h2>
+    <div class="photo-slider">
+        <div><img src="one.jpg" alt="Фотография 1"></div>
+        <div><img src="two.jpg" alt="Фотография 2"></div>
+	    <div><img src="three.jpg" alt="Фотография 2"></div>
+	    <div><img src="four.jpg" alt="Фотография 2"></div>
+	    <div><img src="five.jpg" alt="Фотография 2"></div>
+	    <div><img src="six.jpg" alt="Фотография 2"></div>
+        <!-- Добавьте другие фотографии по аналогии -->
+    </div>
+</section>
 
+<!-- Код для инициализации слайдера фотографий -->
+<script>
+    $(document).ready(function(){
+        $('.photo-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    });
+</script>
+	
     <section id="panel2" class="panel">
 	<!-- Панель с тестом -->
 		<img href="https://quizizz.com/embed/quiz/65756168243bad44cda7f2a9" src="qr.png">
